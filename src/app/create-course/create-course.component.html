@@ -1,0 +1,42 @@
+<div class="full" [ngStyle]="{'background-image': 'url(/assets/img.png)'}">
+  <div class="container" >
+    <h2>Créer un cours</h2>
+    <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+      <!-- Titre -->
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input id="title" formControlName="title" type="text" class="form-control" placeholder="Entrez le titre du cours" />
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input id="description" formControlName="description" class="form-control" placeholder="Ajoutez une description"/>
+      </div>
+
+      <!-- Catégorie -->
+      <div class="form-group">
+        <label for="category">Catégorie</label>
+        <select id="category" formControlName="category" class="form-control">
+          <option value="Développement">Développement</option>
+          <option value="Design">Design</option>
+          <option value="Marketing">Marketing</option>
+        </select>
+      </div>
+
+      <!-- Niveau -->
+      <div class="form-group">
+        <label for="level">Niveau</label>
+        <select id="level" formControlName="level" class="form-control">
+          <option value="Débutant">Débutant</option>
+          <option value="Intermédiaire">Intermédiaire</option>
+          <option value="Avancé">Avancé</option>
+        </select>
+      </div>
+
+      <!-- Bouton Soumettre -->
+      <button type="submit" class="btn-submit" [disabled]="courseForm.invalid">Créer</button>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

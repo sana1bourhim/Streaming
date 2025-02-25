@@ -1,0 +1,82 @@
+
+  <div class="teacher-home-container" [ngStyle]="{'background-image': 'url(/assets/img.png)'}">
+      <header class="header" >
+        <div class="logo-container" >
+          <img src="favicon.ico" alt="Logo de l'application" class="logo">
+        </div>
+        <div class="user-info">
+          <span>Bienvenue, Professeur !</span>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>account_circle</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item class="profil" (click)="viewProfile()">Profil</button>
+            <button mat-menu-item class="profil" (click)="logout()">Déconnexion</button>
+          </mat-menu>
+        </div>
+      </header>
+
+
+      <!-- Barre d'actions -->
+      <div class="action-bar">
+        <button mat-raised-button color="primary" class="ajouter" (click)="addCourse()">
+           Ajouter un cours
+        </button>
+        <button mat-raised-button color="primary" class="ajouter" (click)="addCourse()">
+          Ajouter un quiz
+        </button>
+      </div>
+
+      <h2>MES COURS</h2>
+      <div class="course-list">
+        <div *ngFor="let course of courses" class="course-card">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{ course.titre }}</mat-card-title>
+              <mat-card-subtitle>{{ course.categorie }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ course.description }}</p>
+              <p><strong>Étudiants inscrits :</strong> {{ course.etudiantsInscrits }}</p>
+              <p><strong>Note moyenne :</strong> {{ course.noteMoyenne }}/5</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button class="change-button" (click)="editCourse(course.id)">Modifier</button>
+              <button mat-button color="warn" class="change-button" (click)="deleteCourse(course.id)">Supprimer</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+      <h2>STATISTIQUES</h2>
+      <div class="statistics">
+        <div class="stats-cards">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Nombre total de cours</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="stat-value">{{ totalCourses }}</p>
+            </mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Étudiants inscrits</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="stat-value">{{ totalStudents }}</p>
+            </mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Note moyenne globale</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="stat-value">{{ averageRating }}/5</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+<app-footer></app-footer>

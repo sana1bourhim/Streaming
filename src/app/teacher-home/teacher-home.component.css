@@ -1,0 +1,184 @@
+.teacher-home-container {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: #b5cbd8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.logo-container .logo {
+  width: 120px;
+  height: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.user-info button {
+  background-color: #36b9f3;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-info button:hover {
+  background-color: #2a8eba;
+}
+
+.action-bar {
+  gap:2px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.course-list,
+.statistics {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.course-card {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #b5cbd8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+mat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-header {
+  background-color: #1b82ba;
+  color: white;
+  padding: 16px;
+}
+
+mat-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+mat-card-subtitle {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+mat-card-content {
+  padding: 16px;
+  color: #555;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+mat-card-actions button {
+  margin-left: 10px;
+}
+
+.statistics .stats-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.statistics mat-card {
+  width: 30%;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0c1749;
+}
+.ajouter{
+  padding: 12px;
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Microsoft Himalaya";
+  font-size: 22px;
+  background-color: #26abb8;
+  border-color: #26abb8;
+}
+
+.ajouter:hover{
+  background-color: #208e98;
+}
+
+.change-button{
+  color:#ffffff;
+  background-color: #131010;
+  border-style: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.change-button:hover{
+  background-color: #808687;
+  color:#000000;
+}
+.profil{
+  background-color: #131010;
+  border-radius: 5px;
+  color: white;
+  margin:2px;
+  cursor: pointer;
+  padding: 7px;
+  border-style: none;
+}

@@ -1,0 +1,51 @@
+<div class="register-container">
+  <div class="register-box">
+    <!-- Logo en haut au centre -->
+    <div class="logo-container">
+      <img src="assets/logos.png" alt="Logo de l'application" class="logo">
+    </div>
+    <h2>Inscription</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          placeholder="Entrez votre nom"
+        />
+        <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="error-message">
+          Nom requis.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Entrez votre email"
+        />
+        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error-message">
+          Email invalide.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="Entrez votre mot de passe"
+        />
+        <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="error-message">
+          Mot de passe requis.
+        </div>
+      </div>
+      <button type="submit" [disabled]="registerForm.invalid">S'inscrire</button>
+      <p class="login-link">
+        Déjà un compte ? <a routerLink="/login">Se connecter</a>
+      </p>
+    </form>
+  </div>
+</div>
